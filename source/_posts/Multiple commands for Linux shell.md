@@ -1,4 +1,4 @@
-title: Linux shell执行多命令之 && 和 ||
+title: Multiple commands for Linux shell
 date: 2017-12-07  00:15:46
 tags: shell
 category:      shell脚本
