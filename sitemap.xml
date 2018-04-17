@@ -1,11 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   
   <url>
-    <loc>http://yoursite.com/%E7%BB%8F%E5%85%B8%E7%BC%96%E7%A8%8B%E4%B9%A6%E7%B1%8D%E4%B9%A6%E5%8D%95/</loc>
+    <loc>http://yoursite.com/%E3%80%8A%E5%88%BB%E6%84%8F%E7%BB%83%E4%B9%A0%EF%BC%9A%E5%A6%82%E4%BD%95%E4%BB%8E%E6%96%B0%E6%89%8B%E5%88%B0%E5%A4%A7%E5%B8%88%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
     
-    <lastmod>2018-04-02T17:30:32.843Z</lastmod>
+    <lastmod>2018-04-17T13:53:16.619Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/Multiple%20commands%20for%20Linux%20shell/</loc>
+    
+    <lastmod>2018-04-08T14:53:46.579Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    
+    <lastmod>2018-04-02T17:30:32.849Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/categories/index.html</loc>
+    
+    <lastmod>2018-04-02T17:30:32.848Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/about/index.html</loc>
+    
+    <lastmod>2018-04-02T17:30:32.844Z</lastmod>
     
   </url>
   
@@ -25,6 +52,13 @@
   
   <url>
     <loc>http://yoursite.com/%E8%AF%BB%E3%80%8A%E7%8E%8B%E4%BA%8C%E7%9A%84%E7%BB%8F%E6%B5%8E%E5%AD%A6%E6%95%85%E4%BA%8B%E3%80%8B/</loc>
+    
+    <lastmod>2018-04-02T17:30:32.843Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/%E7%BB%8F%E5%85%B8%E7%BC%96%E7%A8%8B%E4%B9%A6%E7%B1%8D%E4%B9%A6%E5%8D%95/</loc>
     
     <lastmod>2018-04-02T17:30:32.843Z</lastmod>
     
@@ -59,14 +93,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/%E3%80%8A%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E8%80%85%E8%B7%AF%E7%BA%BF%E5%9B%BE%E2%80%94%E4%BB%8E%E5%AD%A6%E5%BE%92%E5%88%B0%E9%AB%98%E6%89%8B%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
+    <loc>http://yoursite.com/%E5%85%B3%E4%BA%8E%E6%97%B6%E9%97%B4%E5%92%8C%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</loc>
     
     <lastmod>2018-04-02T17:30:32.841Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/%E5%85%B3%E4%BA%8E%E6%97%B6%E9%97%B4%E5%92%8C%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</loc>
+    <loc>http://yoursite.com/%E3%80%8A%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E8%80%85%E8%B7%AF%E7%BA%BF%E5%9B%BE%E2%80%94%E4%BB%8E%E5%AD%A6%E5%BE%92%E5%88%B0%E9%AB%98%E6%89%8B%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
     
     <lastmod>2018-04-02T17:30:32.841Z</lastmod>
     
