@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="哈迪斯的小站">
 <meta property="og:description" content="经典书籍有助于提升自己，多读经典的编程书籍有利于夯实自己的基础。尽量抽空多读书吧。 带删除线的表示自己已经读过了。如 《软件开发者路线图：从学徒到高手》 在github看到一个编程相关的书单，列举编程相关的书籍。特此引用，原文github地址 https://github.com/jobbole/awesome-programming-books ，欢迎大家去star关注  100+ 经典技术书">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-02T17:30:32.843Z">
+<meta property="og:updated_time" content="2018-07-26T15:12:09.224Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="经典编程书籍书单">
 <meta name="twitter:description" content="经典书籍有助于提升自己，多读经典的编程书籍有利于夯实自己的基础。尽量抽空多读书吧。 带删除线的表示自己已经读过了。如 《软件开发者路线图：从学徒到高手》 在github看到一个编程相关的书单，列举编程相关的书籍。特此引用，原文github地址 https://github.com/jobbole/awesome-programming-books ，欢迎大家去star关注  100+ 经典技术书">
@@ -162,6 +162,33 @@
         
       </header>
     
+    <!-- 目录内容 -->
+  
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+    <div id="toc-article" class="toc-article">
+      <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+    <strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#计算机系统与网络"><span class="toc-number">1.</span> <span class="toc-text">计算机系统与网络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编程通用"><span class="toc-number">2.</span> <span class="toc-text">编程通用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#算法与数据结构"><span class="toc-number">3.</span> <span class="toc-text">算法与数据结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#职业修炼与规划"><span class="toc-number">4.</span> <span class="toc-text">职业修炼与规划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#大师访谈"><span class="toc-number">5.</span> <span class="toc-text">大师访谈</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#架构-性能"><span class="toc-number">6.</span> <span class="toc-text">架构/性能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web前端"><span class="toc-number">7.</span> <span class="toc-text">Web前端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java开发"><span class="toc-number">8.</span> <span class="toc-text">Java开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NET"><span class="toc-number">9.</span> <span class="toc-text">.NET</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python"><span class="toc-number">10.</span> <span class="toc-text">Python</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Android"><span class="toc-number">11.</span> <span class="toc-text">Android</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#iOS"><span class="toc-number">12.</span> <span class="toc-text">iOS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PHP"><span class="toc-number">13.</span> <span class="toc-text">PHP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C语言"><span class="toc-number">14.</span> <span class="toc-text">C语言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C"><span class="toc-number">15.</span> <span class="toc-text">C++</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#机器学习和数据挖掘"><span class="toc-number">16.</span> <span class="toc-text">机器学习和数据挖掘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库"><span class="toc-number">17.</span> <span class="toc-text">数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#测试"><span class="toc-number">18.</span> <span class="toc-text">测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目与团队"><span class="toc-number">19.</span> <span class="toc-text">项目与团队</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#求职面试"><span class="toc-number">20.</span> <span class="toc-text">求职面试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编程之外"><span class="toc-number">21.</span> <span class="toc-text">编程之外</span></a></li></ol>
+         </div>
+   <script type="text/javascript">
+  function showToc(){
+    var toc_article = document.getElementById("toc-article");
+    var show_toc_btn = document.getElementById("show-toc-btn");
+    toc_article.setAttribute("style","display:block");
+    show_toc_btn.setAttribute("style","display:none");
+    };
+  function showBtn(){
+    var toc_article = document.getElementById("toc-article");
+    var show_toc_btn = document.getElementById("show-toc-btn");
+    toc_article.setAttribute("style","display:none");
+    show_toc_btn.setAttribute("style","display:block");
+    };
+   </script>
+      
+  <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
@@ -523,6 +550,19 @@ books" target="_blank" rel="noopener">https://github.com/jobbole/awesome-program
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#计算机系统与网络"><span class="toc-number">1.</span> <span class="toc-text">计算机系统与网络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编程通用"><span class="toc-number">2.</span> <span class="toc-text">编程通用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#算法与数据结构"><span class="toc-number">3.</span> <span class="toc-text">算法与数据结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#职业修炼与规划"><span class="toc-number">4.</span> <span class="toc-text">职业修炼与规划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#大师访谈"><span class="toc-number">5.</span> <span class="toc-text">大师访谈</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#架构-性能"><span class="toc-number">6.</span> <span class="toc-text">架构/性能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web前端"><span class="toc-number">7.</span> <span class="toc-text">Web前端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java开发"><span class="toc-number">8.</span> <span class="toc-text">Java开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NET"><span class="toc-number">9.</span> <span class="toc-text">.NET</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Python"><span class="toc-number">10.</span> <span class="toc-text">Python</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Android"><span class="toc-number">11.</span> <span class="toc-text">Android</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#iOS"><span class="toc-number">12.</span> <span class="toc-text">iOS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PHP"><span class="toc-number">13.</span> <span class="toc-text">PHP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C语言"><span class="toc-number">14.</span> <span class="toc-text">C语言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C"><span class="toc-number">15.</span> <span class="toc-text">C++</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#机器学习和数据挖掘"><span class="toc-number">16.</span> <span class="toc-text">机器学习和数据挖掘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据库"><span class="toc-number">17.</span> <span class="toc-text">数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#测试"><span class="toc-number">18.</span> <span class="toc-text">测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目与团队"><span class="toc-number">19.</span> <span class="toc-text">项目与团队</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#求职面试"><span class="toc-number">20.</span> <span class="toc-text">求职面试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编程之外"><span class="toc-number">21.</span> <span class="toc-text">编程之外</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
