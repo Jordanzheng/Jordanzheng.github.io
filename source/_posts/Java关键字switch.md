@@ -3,6 +3,7 @@ title: Java关键字switch
 date: 2017-09-15 22:53:58
 tags: java
 categories: Java基础
+toc: true
 ---
 
 ## 基本概念

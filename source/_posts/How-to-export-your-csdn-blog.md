@@ -3,6 +3,7 @@ title: 批量导出CSDN博客至hexo的解决办法
 date: 2018-03-31 23:34:06
 tags: [hexo,csdn博客,博客迁移]
 categories: 经验总结
+toc: true
 ---
 
 最近利用gitpage+hexo搭建好自己的博客后，想将自己的之前的csdn博客批量迁移到自己新的hexo博客上，网上搜索了一下， 发现有人已经用python写了个工具，可以将博客导出为Markdown和HTML格式：[csdn-blog-export](https://github.com/gaocegege/csdn-blog-export)  。 

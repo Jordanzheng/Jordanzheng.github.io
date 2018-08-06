@@ -2,6 +2,7 @@ title: java基本数据类型
 date: 2017-08-24  23:22:11
 tags: java
 category:      Java基础
+toc: true
 ---
 java是一门强类型语言，每个变量都必须声明类型。第一次变量赋值称为变量的初始化。
 
