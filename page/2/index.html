@@ -144,102 +144,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Multiple commands for Linux shell" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Multiple commands for Linux shell/">Multiple commands for Linux shell</a>
-    </h1>
-  
-
-        
-        <a href="/Multiple commands for Linux shell/" class="archive-article-date">
-  	<time datetime="2017-12-06T16:15:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天在写shell 脚本时，需要几条命令串起来执行，并且前面命令执行失败了，后面命令就不行了。上网google一下，找到解决办法，采用逻辑与 <strong> &amp;&amp; </strong> 即可。</p>
-<p>下面总结一下shell执行多命令的方法。</p>
-<h4 id="一、分号；分割"><a href="#一、分号；分割" class="headerlink" title="一、分号；分割"></a>一、分号；分割</h4><pre><code>command1;command2;command3;...
-</code></pre><p>前面命令失败了不影响后面的命令执行。</p>
-<h4 id="二、逻辑与-amp-amp"><a href="#二、逻辑与-amp-amp" class="headerlink" title="二、逻辑与 &amp;&amp;"></a>二、逻辑与 &amp;&amp;</h4><p><strong> 命令执行返回值为0表明执行成功 </strong></p>
-<pre><code>command1 &amp;&amp; command2 &amp;&amp; command3 &amp;&amp; ...
-</code></pre><p>命令都用&amp;&amp;串接，从左到右执行，当前面的命令执行“成功”后才继续执行后面的命令。<br>另外，在script文件中，如果某一行太长写不完，command1 太长，可以在行末，放置接续上行的符号”\”。</p>
-<pre><code>command1 &amp;&amp; \
-command2 &amp;&amp; \
-command3 &amp;&amp; ...
-</code></pre><h4 id="三、逻辑或"><a href="#三、逻辑或" class="headerlink" title="三、逻辑或 ||"></a>三、逻辑或 ||</h4><pre><code>command1 || command2 || command3 || ...
-</code></pre><p>从左到右执行，当前面的命令执行“失败”后才继续执行后面的命令。若前一个命令执行成功，就不会执行下一条了。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shell</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/shell脚本//" class="article-tag-list-link color3">shell脚本</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/Multiple commands for Linux shell/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-关于时间和知识管理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -895,6 +799,93 @@ books" target="_blank" rel="noopener">https://github.com/jobbole/awesome-program
 
 
   
+    <article id="post-Kindle已连接WiFi网络,无法连接互联网的解决办法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Kindle已连接WiFi网络,无法连接互联网的解决办法/">Kindle已连接WiFi网络，但无法连接互联网的解决办法</a>
+    </h1>
+  
+
+        
+        <a href="/Kindle已连接WiFi网络,无法连接互联网的解决办法/" class="archive-article-date">
+  	<time datetime="2017-09-02T08:19:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天打开kindle准备看《浪潮之巅》，发现没有自动同步我在手机上看的页数，一看是kindle没连上Wi-Fi，然后就主动去连接Wi-Fi。 但连接Wi-Fi后显示<strong> Kindle已连接WiFi网络，但无法连接互联网的解决办法 </strong><br>
+        
+          <a class="article-more-a" href="/Kindle已连接WiFi网络,无法连接互联网的解决办法/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">kindle</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/经验总结//" class="article-tag-list-link color5">经验总结</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/Kindle已连接WiFi网络,无法连接互联网的解决办法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-黑客与画家读书笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1304,6 +1295,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">编程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">kindle</a>
               </li>
             
             <div class="clearfix"></div>
