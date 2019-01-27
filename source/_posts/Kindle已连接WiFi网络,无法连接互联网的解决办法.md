@@ -1,8 +1,10 @@
 title: Kindle已连接WiFi网络，但无法连接互联网的解决办法
 date: 2017-09-02  16:19:55
-tags: kindle
+tags: kindle 
 
-category:  经验总结
+categories: 经验总结
+
+------
 
 今天打开kindle准备看《浪潮之巅》，发现没有自动同步我在手机上看的页数，一看是kindle没连上Wi-Fi，然后就主动去连接Wi-Fi。 但连接Wi-Fi后显示** Kindle已连接WiFi网络，但无法连接互联网的解决办法 **  
 <!-- more -->
