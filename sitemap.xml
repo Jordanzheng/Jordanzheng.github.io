@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jordanzheng.github.io/about/index.html</loc>
+    
+    <lastmod>2019-05-25T09:00:58.636Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jordanzheng.github.io/open-multi-module-in-one-project-for-idea/</loc>
     
     <lastmod>2019-01-27T17:18:02.346Z</lastmod>
@@ -166,13 +173,6 @@
     <loc>https://jordanzheng.github.io/categories/index.html</loc>
     
     <lastmod>2018-04-02T17:30:32.848Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jordanzheng.github.io/about/index.html</loc>
-    
-    <lastmod>2018-04-02T17:30:32.844Z</lastmod>
     
   </url>
   
