@@ -3,10 +3,30 @@
 
 
     
+  <url>
+    <loc>https://jordanzheng.github.io/byte-order/</loc>
+    <lastmod>2019-07-14T13:52:45.516Z</lastmod>
+    <data>
+        <display>
+        <title>字节序：大端和小端</title>
+        <pubTime>2019-07-14T12:49:37.000Z</pubTime>
+        
+        <tag>软件开发</tag>
+         
+         
+           
+             
+              <breadCrumb title="经验总结" url="https://jordanzheng.github.io/categories/%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://jordanzheng.github.io/open-multi-module-in-one-project-for-idea/</loc>
-    <lastmod>2019-01-27T17:18:02.346Z</lastmod>
+    <lastmod>2019-01-27T17:18:02.000Z</lastmod>
     <data>
         <display>
         <title>idea中一个窗口引入多个maven project工程</title>
@@ -26,7 +46,7 @@
     
   <url>
     <loc>https://jordanzheng.github.io/open-the-folder-in-idea/</loc>
-    <lastmod>2019-01-27T16:14:02.967Z</lastmod>
+    <lastmod>2019-01-27T16:14:02.000Z</lastmod>
     <data>
         <display>
         <title>在IntelliJ idea中快速打开文件所在的文件夹的解决办法</title>
@@ -46,7 +66,7 @@
     
   <url>
     <loc>https://jordanzheng.github.io/Kindle%E5%B7%B2%E8%BF%9E%E6%8E%A5WiFi%E7%BD%91%E7%BB%9C,%E6%97%A0%E6%B3%95%E8%BF%9E%E6%8E%A5%E4%BA%92%E8%81%94%E7%BD%91%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</loc>
-    <lastmod>2018-11-06T14:28:40.172Z</lastmod>
+    <lastmod>2018-11-06T14:28:40.000Z</lastmod>
     <data>
         <display>
         <title>Kindle已连接WiFi网络，但无法连接互联网的解决办法</title>
@@ -66,7 +86,7 @@
     
   <url>
     <loc>https://jordanzheng.github.io/LeetCode-206-Reverse-Linked-list/</loc>
-    <lastmod>2018-11-05T16:30:36.481Z</lastmod>
+    <lastmod>2018-11-05T16:30:36.000Z</lastmod>
     <data>
         <display>
         <title>LeetCode 206 Reverse Linked List（反转链表)</title>
@@ -88,7 +108,7 @@
     
   <url>
     <loc>https://jordanzheng.github.io/load-balance/</loc>
-    <lastmod>2018-09-27T17:14:14.645Z</lastmod>
+    <lastmod>2018-09-27T17:14:14.000Z</lastmod>
     <data>
         <display>
         <title>负载均衡的那些事</title>
@@ -108,7 +128,7 @@
     
   <url>
     <loc>https://jordanzheng.github.io/%E3%80%8A%E5%88%BB%E6%84%8F%E7%BB%83%E4%B9%A0%EF%BC%9A%E5%A6%82%E4%BD%95%E4%BB%8E%E6%96%B0%E6%89%8B%E5%88%B0%E5%A4%A7%E5%B8%88%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2018-09-27T16:07:55.581Z</lastmod>
+    <lastmod>2018-09-27T16:07:55.000Z</lastmod>
     <data>
         <display>
         <title>《刻意练习：如何从新手到大师》读书笔记</title>
@@ -128,7 +148,7 @@
     
   <url>
     <loc>https://jordanzheng.github.io/how-to-solve-connection-refused-errors-in-ssh-connection/</loc>
-    <lastmod>2018-08-06T16:29:06.930Z</lastmod>
+    <lastmod>2018-08-06T16:29:06.000Z</lastmod>
     <data>
         <display>
         <title>linux可以ping通但是无法ssh登陆的问题</title>
@@ -149,7 +169,7 @@
     
   <url>
     <loc>https://jordanzheng.github.io/%E6%8E%A8%E8%8D%90%E5%87%A0%E6%AC%BE%E5%A5%BD%E7%94%A8%E7%9A%84chrome%E6%8F%92%E4%BB%B6%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89/</loc>
-    <lastmod>2018-07-26T16:31:11.505Z</lastmod>
+    <lastmod>2018-07-26T16:31:11.000Z</lastmod>
     <data>
         <display>
         <title>推荐几款好用的chrome插件（持续更新）</title>
@@ -169,7 +189,7 @@
     
   <url>
     <loc>https://jordanzheng.github.io/How-to-export-your-csdn-blog/</loc>
-    <lastmod>2018-07-26T16:30:41.834Z</lastmod>
+    <lastmod>2018-07-26T16:30:41.000Z</lastmod>
     <data>
         <display>
         <title>批量导出CSDN博客至hexo的解决办法</title>
@@ -193,7 +213,7 @@
     
   <url>
     <loc>https://jordanzheng.github.io/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E4%BF%9D%E6%8C%81%E5%A5%BD%E7%9A%84%E8%BA%AB%E4%BD%93%E7%8A%B6%E6%80%81/</loc>
-    <lastmod>2018-07-26T16:30:30.039Z</lastmod>
+    <lastmod>2018-07-26T16:30:30.000Z</lastmod>
     <data>
         <display>
         <title>程序员如何保持好的身体状态</title>
@@ -213,7 +233,7 @@
     
   <url>
     <loc>https://jordanzheng.github.io/%E5%B7%B2%E9%98%85%E8%AF%BB%E4%B9%A6%E5%8D%95/</loc>
-    <lastmod>2018-07-26T16:30:21.300Z</lastmod>
+    <lastmod>2018-07-26T16:30:21.000Z</lastmod>
     <data>
         <display>
         <title>已阅读书单</title>
@@ -233,7 +253,7 @@
     
   <url>
     <loc>https://jordanzheng.github.io/%E5%85%B3%E4%BA%8E%E6%97%B6%E9%97%B4%E5%92%8C%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</loc>
-    <lastmod>2018-07-26T16:30:13.312Z</lastmod>
+    <lastmod>2018-07-26T16:30:13.000Z</lastmod>
     <data>
         <display>
         <title>【转】关于时间和知识管理</title>
@@ -253,7 +273,7 @@
     
   <url>
     <loc>https://jordanzheng.github.io/%E6%A0%91%E7%AB%8B%E6%AD%A3%E7%A1%AE%E7%9A%84%E9%87%91%E9%92%B1%E8%A7%82---%E3%80%8A%E5%AF%8C%E7%88%B8%E7%88%B8%EF%BC%8C%E7%A9%B7%E7%88%B8%E7%88%B8%E3%80%8B/</loc>
-    <lastmod>2018-07-26T16:25:33.067Z</lastmod>
+    <lastmod>2018-07-26T16:25:33.000Z</lastmod>
     <data>
         <display>
         <title>树立正确的金钱观---《富爸爸，穷爸爸》</title>
@@ -273,7 +293,7 @@
     
   <url>
     <loc>https://jordanzheng.github.io/%E8%AF%BB%E3%80%8A%E7%8E%8B%E4%BA%8C%E7%9A%84%E7%BB%8F%E6%B5%8E%E5%AD%A6%E6%95%85%E4%BA%8B%E3%80%8B/</loc>
-    <lastmod>2018-07-26T16:25:18.483Z</lastmod>
+    <lastmod>2018-07-26T16:25:18.000Z</lastmod>
     <data>
         <display>
         <title>读《王二的经济学故事》</title>
@@ -295,7 +315,7 @@
     
   <url>
     <loc>https://jordanzheng.github.io/%E3%80%8A%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E8%80%85%E8%B7%AF%E7%BA%BF%E5%9B%BE%E2%80%94%E4%BB%8E%E5%AD%A6%E5%BE%92%E5%88%B0%E9%AB%98%E6%89%8B%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2018-07-26T16:25:07.729Z</lastmod>
+    <lastmod>2018-07-26T16:25:07.000Z</lastmod>
     <data>
         <display>
         <title>《软件开发者路线图—从学徒到高手》读书笔记</title>
@@ -315,7 +335,7 @@
     
   <url>
     <loc>https://jordanzheng.github.io/java%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</loc>
-    <lastmod>2018-07-26T16:24:53.844Z</lastmod>
+    <lastmod>2018-07-26T16:24:53.000Z</lastmod>
     <data>
         <display>
         <title>java基本数据类型</title>
@@ -335,7 +355,7 @@
     
   <url>
     <loc>https://jordanzheng.github.io/Java%E5%85%B3%E9%94%AE%E5%AD%97switch/</loc>
-    <lastmod>2018-07-26T16:24:43.613Z</lastmod>
+    <lastmod>2018-07-26T16:24:43.000Z</lastmod>
     <data>
         <display>
         <title>Java关键字switch</title>
@@ -355,7 +375,7 @@
     
   <url>
     <loc>https://jordanzheng.github.io/%E7%BB%8F%E5%85%B8%E7%BC%96%E7%A8%8B%E4%B9%A6%E7%B1%8D%E4%B9%A6%E5%8D%95/</loc>
-    <lastmod>2018-07-26T16:24:23.404Z</lastmod>
+    <lastmod>2018-07-26T16:24:23.000Z</lastmod>
     <data>
         <display>
         <title>经典编程书籍书单</title>
@@ -375,7 +395,7 @@
     
   <url>
     <loc>https://jordanzheng.github.io/%E3%80%8A%E6%B5%AA%E6%BD%AE%E4%B9%8B%E5%B7%85%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2018-07-26T16:24:18.086Z</lastmod>
+    <lastmod>2018-07-26T16:24:18.000Z</lastmod>
     <data>
         <display>
         <title>《浪潮之巅》读书笔记</title>
@@ -395,7 +415,7 @@
     
   <url>
     <loc>https://jordanzheng.github.io/Reading-notes-on-God-throws-the-dice-The-history-of-quantum-physics/</loc>
-    <lastmod>2018-07-26T15:11:46.481Z</lastmod>
+    <lastmod>2018-07-26T15:11:46.000Z</lastmod>
     <data>
         <display>
         <title>读《上帝掷骰子吗？量子物理史话》</title>
@@ -417,7 +437,7 @@
     
   <url>
     <loc>https://jordanzheng.github.io/Multiple%20commands%20for%20Linux%20shell/</loc>
-    <lastmod>2018-04-08T14:53:46.579Z</lastmod>
+    <lastmod>2018-04-08T14:53:46.000Z</lastmod>
     <data>
         <display>
         <title>Multiple commands for Linux shell</title>
@@ -435,11 +455,29 @@
     </url>
 
     
-    
+  <url>
+    <loc>https://jordanzheng.github.io/java%E7%9A%84native%E6%96%B9%E6%B3%95%E5%92%8CJNI/</loc>
+    <lastmod>2018-04-02T17:30:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>java的native方法和JNI</title>
+        <pubTime>2017-11-06T16:36:49.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java基础" url="https://jordanzheng.github.io/categories/Java%E5%9F%BA%E7%A1%80/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>https://jordanzheng.github.io/%E9%BB%91%E5%AE%A2%E4%B8%8E%E7%94%BB%E5%AE%B6%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2018-04-02T17:30:32.843Z</lastmod>
+    <lastmod>2018-04-02T17:30:32.000Z</lastmod>
     <data>
         <display>
         <title>《黑客与画家》读书笔记</title>
@@ -457,9 +495,10 @@
     </url>
 
     
+    
   <url>
     <loc>https://jordanzheng.github.io/%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E6%97%A0%E6%B3%95%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2018-04-02T17:30:32.843Z</lastmod>
+    <lastmod>2018-04-02T17:30:32.000Z</lastmod>
     <data>
         <display>
         <title>远程桌面无法复制粘贴的解决方法</title>
@@ -477,23 +516,4 @@
     </url>
 
     
-  <url>
-    <loc>https://jordanzheng.github.io/java%E7%9A%84native%E6%96%B9%E6%B3%95%E5%92%8CJNI/</loc>
-    <lastmod>2018-04-02T17:30:32.840Z</lastmod>
-    <data>
-        <display>
-        <title>java的native方法和JNI</title>
-        <pubTime>2017-11-06T16:36:49.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java基础" url="https://jordanzheng.github.io/categories/Java%E5%9F%BA%E7%A1%80/"/>
-          
-        </display>
-    </data>
-    </url>
-
 </urlset>
