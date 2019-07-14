@@ -102,9 +102,9 @@ gitment_oauth:
 gitalk:
   enable:  true
   githubID:  Jordanzheng   
-  repo:  'https://jordanzheng.github.io/'
-  ClientID:  '6f054dd13a6c0d5ce8c2'
-  ClientSecret:  '6b364366481af6aee5de6546c901833ddc1e0af1'
+  repo:  'blogComment'
+  ClientID:  'd9b54b9f4cf4c079cebc'
+  ClientSecret:  '1c0c33232001358b258fa7170149efc806c05266'
   adminUser:  Jordanzheng
   distractionFreeMode: true
 
