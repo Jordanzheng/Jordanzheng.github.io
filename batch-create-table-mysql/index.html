@@ -6,20 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://jordanzheng.github.io">
-  <title>categories | 哈迪斯的小站</title>
+  <title>mysql批量创建表 | 哈迪斯的小站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="google-site-verification" content="oQaadWML0GOpIaDC75VEM8yDMgQAtvWebqgtzqYzTz8" />
-  <meta name="description" content="学习、记录、成长">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="https://jordanzheng.github.io/categories/index.html">
+  <meta name="description" content="互联网业务快速发展，经常遇到业务在设计表时只是单表，后面随着业务快速发展，单表数据量达到千万级别，甚至上亿级别。此时mysql单表性能下降，解决办法之一是分表。 批量创建多张表结构一样的表，方法有很多，本文介绍两种，仅供参考：">
+<meta name="keywords" content="mysql,数据库">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql批量创建表">
+<meta property="og:url" content="https://jordanzheng.github.io/batch-create-table-mysql/index.html">
 <meta property="og:site_name" content="哈迪斯的小站">
-<meta property="og:description" content="学习、记录、成长">
+<meta property="og:description" content="互联网业务快速发展，经常遇到业务在设计表时只是单表，后面随着业务快速发展，单表数据量达到千万级别，甚至上亿级别。此时mysql单表性能下降，解决办法之一是分表。 批量创建多张表结构一样的表，方法有很多，本文介绍两种，仅供参考：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-02T17:30:32.000Z">
+<meta property="og:updated_time" content="2019-12-28T15:57:53.918Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
-<meta name="twitter:description" content="学习、记录、成长">
+<meta name="twitter:title" content="mysql批量创建表">
+<meta name="twitter:description" content="互联网业务快速发展，经常遇到业务在设计表时只是单表，后面随着业务快速发展，单表数据量达到千万级别，甚至上亿级别。此时mysql单表性能下降，解决办法之一是分表。 批量创建多张表结构一样的表，方法有很多，本文介绍两种，仅供参考：">
   
     <link rel="alternative" href="/atom.xml" title="哈迪斯的小站" type="application/atom+xml">
   
@@ -143,14 +144,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-batch-create-table-mysql" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      categories
+      mysql批量创建表
     </h1>
   
 
@@ -165,15 +166,23 @@
   </a>
   
         
-        <a href="/categories/index.html" class="archive-article-date">
-  	<time datetime="2018-03-14T16:23:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-15</time>
+        <a href="/batch-create-table-mysql/" class="archive-article-date">
+  	<time datetime="2019-08-17T12:49:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>互联网业务快速发展，经常遇到业务在设计表时只是单表，后面随着业务快速发展，单表数据量达到千万级别，甚至上亿级别。此时mysql单表性能下降，解决办法之一是分表。</p>
+<p>批量创建多张表结构一样的表，方法有很多，本文介绍两种，仅供参考：</p>
+<a id="more"></a>
+<h2 id="一、存储过程创建多张表"><a href="#一、存储过程创建多张表" class="headerlink" title="一、存储过程创建多张表"></a>一、存储过程创建多张表</h2><h3 id="1、创建一百张表-createTable-sql"><a href="#1、创建一百张表-createTable-sql" class="headerlink" title="1、创建一百张表 createTable.sql"></a>1、创建一百张表 createTable.sql</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">#创建数据库要先指定字符集，否则使用数据库的默认字符集</span><br><span class="line">CREATE DATABASE db_test DEFAULT CHARACTER SET UTF8;</span><br><span class="line"></span><br><span class="line">USE db_test;</span><br><span class="line"></span><br><span class="line">CALL create_table();</span><br><span class="line"></span><br><span class="line">#-------------------以下是存储过程--------------</span><br><span class="line"></span><br><span class="line">DELIMITER $$  </span><br><span class="line">  </span><br><span class="line">CREATE  </span><br><span class="line">    PROCEDURE `db_test`.`create_table`()  </span><br><span class="line">    BEGIN  </span><br><span class="line">  </span><br><span class="line">         DECLARE i INT;  </span><br><span class="line">         DECLARE table_name VARCHAR(30);   </span><br><span class="line">         DECLARE table_pre VARCHAR(30);   </span><br><span class="line">         DECLARE sql_text VARCHAR(3000);   </span><br><span class="line">         SET i=0;  </span><br><span class="line">         SET table_name=&apos;&apos;;  </span><br><span class="line">         SET table_pre=&apos;test_table_&apos;;  </span><br><span class="line">         SET sql_text=&apos;&apos;;  </span><br><span class="line">         WHILE i&lt;100 DO   </span><br><span class="line">            SET table_name=CONCAT(table_pre,i);   </span><br><span class="line">              </span><br><span class="line">            SET sql_text=CONCAT(&apos;CREATE TABLE &apos;, table_name, &apos; (</span><br><span class="line">                   `uid` BIGINT(11) unsigned NOT NULL COMMENT \&apos;统一ID\&apos;,</span><br><span class="line">                   `name` varchar(32) COLLATE utf8_bin DEFAULT NULL COMMENT \&apos;姓名\&apos;,</span><br><span class="line">                   `idcard` varchar(32) COLLATE utf8_bin DEFAULT NULL COMMENT \&apos;身份证\&apos;,</span><br><span class="line">                   `idcard_url` varchar(256) COLLATE utf8_bin DEFAULT NULL COMMENT \&apos;身份证图片\&apos;,</span><br><span class="line">                   `idcard_auth_status` int(4) unsigned DEFAULT 0 COMMENT \&apos;身份证认证状态\&apos;,</span><br><span class="line">                   `idcard_auth_time` BIGINT(12) unsigned DEFAULT 0 COMMENT \&apos;身份证认证时间\&apos;,</span><br><span class="line">                   `phone` varchar(32) COLLATE utf8_bin DEFAULT NULL COMMENT \&apos;手机号码\&apos;,</span><br><span class="line">                   `phone_auth_status` int(4) unsigned DEFAULT 0 COMMENT \&apos;手机认证状态\&apos;,</span><br><span class="line">                   `phone_auth_time` BIGINT(12) unsigned DEFAULT 0 COMMENT \&apos;手机认证时间\&apos;,</span><br><span class="line">                   `update_time` BIGINT(12) unsigned DEFAULT 0 COMMENT \&apos;更新时间\&apos;,</span><br><span class="line">                   PRIMARY KEY (`uid`),</span><br><span class="line">                   KEY `index_name` (`phone`(11)),</span><br><span class="line">                   KEY `index_idcard` (`idcard`(18)),</span><br><span class="line">                 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC&apos; );  </span><br><span class="line">                  </span><br><span class="line">            SELECT sql_text;   </span><br><span class="line">            SET @sql_text=sql_text;  </span><br><span class="line">            PREPARE stmt FROM @sql_text;  </span><br><span class="line">            EXECUTE stmt;  </span><br><span class="line">            DEALLOCATE PREPARE stmt;    </span><br><span class="line">            SET i=i+1;  </span><br><span class="line">        END WHILE;  </span><br><span class="line">  </span><br><span class="line">    END$$  </span><br><span class="line">            </span><br><span class="line">DELIMITER ;</span><br></pre></td></tr></table></figure>
+<h3 id="2、执行存储过程，创建表"><a href="#2、执行存储过程，创建表" class="headerlink" title="2、执行存储过程，创建表"></a>2、执行存储过程，创建表</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">登上mysql，执行createTable.sql即可</span><br></pre></td></tr></table></figure>
+<h2 id="二、利用sql语句创建多张表"><a href="#二、利用sql语句创建多张表" class="headerlink" title="二、利用sql语句创建多张表"></a>二、<strong>利用sql语句创建多张表</strong></h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/sh</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 数据表名定义</span><br><span class="line">timestamp=`date -d "3 month ago" +%Y%m%d`</span><br><span class="line">tablename='t_table_test_20191108'</span><br><span class="line"></span><br><span class="line">sql="CREATE TABLE $tablename (</span><br><span class="line">        id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '唯一id',</span><br><span class="line">        uid BIGINT(20) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'uid',</span><br><span class="line">        msg_id VARCHAR(64) NOT NULL DEFAULT '' COMMENT '消息id',</span><br><span class="line">        msg_ts BIGINT(20) NOT NULL DEFAULT '0' COMMENT '发言时间戳',</span><br><span class="line">        sender_uid BIGINT(20) UNSIGNED NOT NULL DEFAULT '0' COMMENT '发言者uid',</span><br><span class="line">        sender_nic VARCHAR(64) NOT NULL DEFAULT '' COMMENT '发言者昵称',</span><br><span class="line">        text VARCHAR(2048) NOT NULL DEFAULT '' COMMENT '发言内容',</span><br><span class="line">        update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',</span><br><span class="line">        PRIMARY KEY (id),</span><br><span class="line">        UNIQUE INDEX idx_msg_id (msg_id),</span><br><span class="line">        INDEX idx_anchor_uid_msg_ts (anchor_uid, msg_ts)</span><br><span class="line">)COLLATE='utf8mb4_general_ci' ENGINE=InnoDB AUTO_INCREMENT=1000;"</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">mysql -h 10.23.22.22 -udb_test -pdb_test -P2223 -Ddb_test --default-character-set=utf8 -Ne "$sql"</span><br></pre></td></tr></table></figure>
+<p>如果字段名和mysql关键字重复，将字段名用<strong>`</strong>括起来，例如：<code>index</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/sh</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 数据表名定义</span><br><span class="line">timestamp=`date -d "3 month ago" +%Y%m%d`</span><br><span class="line">tablename='t_table_test_20191108'</span><br><span class="line"></span><br><span class="line">sql="CREATE TABLE $tablename (</span><br><span class="line">        \`id \` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '唯一id',</span><br><span class="line">        \`uid \` BIGINT(20) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'uid',</span><br><span class="line">        \`msg_id\` VARCHAR(64) NOT NULL DEFAULT '' COMMENT '消息id',</span><br><span class="line">        \`msg_ts\` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '发言时间戳',</span><br><span class="line">        \`sender_uid\` BIGINT(20) UNSIGNED NOT NULL DEFAULT '0' COMMENT '发言者uid',</span><br><span class="line">        \`sender_nic\` VARCHAR(64) NOT NULL DEFAULT '' COMMENT '发言者昵称',</span><br><span class="line">        \`text\` VARCHAR(2048) NOT NULL DEFAULT '' COMMENT '发言内容',</span><br><span class="line">        \`update_time\` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',</span><br><span class="line">        PRIMARY KEY (\`id\`),</span><br><span class="line">        UNIQUE INDEX idx_msg_id (\`msg_id\`),</span><br><span class="line">        INDEX idx_anchor_uid_msg_ts (\`anchor_uid\`, \`msg_ts\`)</span><br><span class="line">)COLLATE='utf8mb4_general_ci' ENGINE=InnoDB AUTO_INCREMENT=1000;"</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">mysql -h 10.23.22.22 -udb_test -pdb_test -P2223 -Ddb_test --default-character-set=utf8 -Ne "$sql"</span><br></pre></td></tr></table></figure>
+
       
 
       
@@ -181,7 +190,33 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">数据库</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/经验总结//" class="article-tag-list-link color5">经验总结</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -231,7 +266,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://jordanzheng.github.io/categories/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://jordanzheng.github.io/batch-create-table-mysql/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -243,6 +278,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/byte-order/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">字节序：大端和小端</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -264,7 +309,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、存储过程创建多张表"><span class="toc-number">1.</span> <span class="toc-text">一、存储过程创建多张表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、创建一百张表-createTable-sql"><span class="toc-number">1.1.</span> <span class="toc-text">1、创建一百张表 createTable.sql</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、执行存储过程，创建表"><span class="toc-number">1.2.</span> <span class="toc-text">2、执行存储过程，创建表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、利用sql语句创建多张表"><span class="toc-number">2.</span> <span class="toc-text">二、利用sql语句创建多张表</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -296,7 +341,7 @@ if(true){
   	repo: 'blogComment',
   	owner: 'Jordanzheng',
   	admin: ['Jordanzheng'],
-  	id: 'Thu Mar 15 2018 00:23:07 GMT+0800',
+  	id: 'Sat Aug 17 2019 20:49:37 GMT+0800',
   	distractionFreeMode: 'true'
 })
 gitalk.render('gitalk-container') 
@@ -331,7 +376,7 @@ gitalk.render('gitalk-container')
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
