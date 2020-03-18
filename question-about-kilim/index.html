@@ -9,18 +9,18 @@
   <title>kilim疑问解答 | 哈迪斯的小站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="google-site-verification" content="oQaadWML0GOpIaDC75VEM8yDMgQAtvWebqgtzqYzTz8" />
-  <meta name="description" content="1. Kilim中的Task，即用户线程如何调度和切换？相比传统的Thread多线程间抢占式调度，Kilim中的Task采用的是协作式调度，即由Task本身负责释放和恢复占用CPU在多任务的调度上操作系统采取抢占式和协作式两种方式。 2.Kilim如何识别线程堆栈中哪些方法是Pauseable，即可暂停的？Kilim通过代码编译期识别抛出的Pauseable异常注解，来判断识别方法可暂停 3.Ki">
+  <meta name="description" content="1. Kilim中的Task，即用户线程如何调度和切换？相比传统的Thread多线程间抢占式调度，Kilim中的Task采用的是协作式调度，即由Task本身负责释放和恢复占用CPU在多任务的调度上操作系统采取抢占式和协作式两种方式。">
 <meta name="keywords" content="java,协程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="kilim疑问解答">
 <meta property="og:url" content="https://jordanzheng.github.io/question-about-kilim/index.html">
 <meta property="og:site_name" content="哈迪斯的小站">
-<meta property="og:description" content="1. Kilim中的Task，即用户线程如何调度和切换？相比传统的Thread多线程间抢占式调度，Kilim中的Task采用的是协作式调度，即由Task本身负责释放和恢复占用CPU在多任务的调度上操作系统采取抢占式和协作式两种方式。 2.Kilim如何识别线程堆栈中哪些方法是Pauseable，即可暂停的？Kilim通过代码编译期识别抛出的Pauseable异常注解，来判断识别方法可暂停 3.Ki">
+<meta property="og:description" content="1. Kilim中的Task，即用户线程如何调度和切换？相比传统的Thread多线程间抢占式调度，Kilim中的Task采用的是协作式调度，即由Task本身负责释放和恢复占用CPU在多任务的调度上操作系统采取抢占式和协作式两种方式。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-01-12T14:40:04.223Z">
+<meta property="og:updated_time" content="2020-01-12T14:43:14.695Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="kilim疑问解答">
-<meta name="twitter:description" content="1. Kilim中的Task，即用户线程如何调度和切换？相比传统的Thread多线程间抢占式调度，Kilim中的Task采用的是协作式调度，即由Task本身负责释放和恢复占用CPU在多任务的调度上操作系统采取抢占式和协作式两种方式。 2.Kilim如何识别线程堆栈中哪些方法是Pauseable，即可暂停的？Kilim通过代码编译期识别抛出的Pauseable异常注解，来判断识别方法可暂停 3.Ki">
+<meta name="twitter:description" content="1. Kilim中的Task，即用户线程如何调度和切换？相比传统的Thread多线程间抢占式调度，Kilim中的Task采用的是协作式调度，即由Task本身负责释放和恢复占用CPU在多任务的调度上操作系统采取抢占式和协作式两种方式。">
   
     <link rel="alternative" href="/atom.xml" title="哈迪斯的小站" type="application/atom+xml">
   
@@ -175,6 +175,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="1-Kilim中的Task，即用户线程如何调度和切换？"><a href="#1-Kilim中的Task，即用户线程如何调度和切换？" class="headerlink" title="1. Kilim中的Task，即用户线程如何调度和切换？"></a>1. Kilim中的Task，即用户线程如何调度和切换？</h2><p>相比传统的Thread多线程间抢占式调度，Kilim中的Task采用的是协作式调度，即由Task本身负责释放和恢复占用CPU<br>在多任务的调度上操作系统采取抢占式和协作式两种方式。</p>
+<a id="more"></a>
 <h2 id="2-Kilim如何识别线程堆栈中哪些方法是Pauseable，即可暂停的？"><a href="#2-Kilim如何识别线程堆栈中哪些方法是Pauseable，即可暂停的？" class="headerlink" title="2.Kilim如何识别线程堆栈中哪些方法是Pauseable，即可暂停的？"></a>2.Kilim如何识别线程堆栈中哪些方法是Pauseable，即可暂停的？</h2><p>Kilim通过代码编译期识别抛出的Pauseable异常注解，来判断识别方法可暂停</p>
 <h2 id="3-Kilim是如何实现线程执行过程中当前方法的暂停和恢复？"><a href="#3-Kilim是如何实现线程执行过程中当前方法的暂停和恢复？" class="headerlink" title="3.Kilim是如何实现线程执行过程中当前方法的暂停和恢复？"></a>3.Kilim是如何实现线程执行过程中当前方法的暂停和恢复？</h2><p>Kilim通过编译期字节码编织，对每一个可暂停的方法进行字节码处理，在方法执行前和执行后加上相关的执行上下文的处理，暂停时会保存整个线程堆栈，包括完整栈帧，程序计数器等等，然后通过特定的字节码跳转指令jsr跳转到另外一个Task的执行方法中，恢复时将复原整个线程堆栈，包括完整栈帧，程序计数器等等，回到上次暂停时的指令地址处继续执行。</p>
 <h2 id="4-Kilim中的Weaver工具是如何针对编译的代码实现织入的？"><a href="#4-Kilim中的Weaver工具是如何针对编译的代码实现织入的？" class="headerlink" title="4.Kilim中的Weaver工具是如何针对编译的代码实现织入的？"></a>4.Kilim中的Weaver<strong>工具是如何针对编译的代码实现织入的</strong>？</h2><p>字节码技术，具体来说通过ASM字节码框架实现对class文件的重写</p>
@@ -482,18 +483,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">shell</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">kindle</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
@@ -506,6 +495,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
               </li>
              
@@ -514,11 +507,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color2">kindle</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">idea</a>
+                <a href="javascript:void(0)" class="js-tag color1">shell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -546,15 +543,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">idea</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">负载均衡</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">协程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">go</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">自我管理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">职业生涯</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">IT</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">阅读</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">自我管理</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -574,31 +591,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">go</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">远程桌面</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">程序员</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">负载均衡</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">协程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">职业生涯</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">编程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">程序员</a>
               </li>
             
             <div class="clearfix"></div>
